@@ -53,9 +53,6 @@ app.use('/user', userPost);
 app.use("/post", postRoutes);
 app.use("/", indexRoutes);
 
-
-var port = process.env.PORT || '3000';
-var ip = process.env.IP || 'localhost';
-app.listen(port, ip, () => {
-	console.log(`Server is Running on Port ${port}, visit http://${ip}:${port}/ `);
+app.listen(process.env.PORT, process.env.IP, () => {
+	console.log(`Server is Running`);
 });
