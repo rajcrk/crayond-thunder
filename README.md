@@ -1,5 +1,8 @@
 ###### Submission by, Raj Kumar C
 rajkumar.cind@gmail.com
+###### URL for Deployed version on heroku
+https://thunder-crayond.herokuapp.com/
+
 # Crayon`d Task 
 ## How to setup and test this appilcation
 ### What I have done ?
@@ -55,6 +58,9 @@ To create or view a post you must have an account. So when you are running this 
 Ive set certain constraints where you can only access certain API only if you have logged in. The login session is stored on the client side as a hash and the other hash for the session is maintained at the server side along with a key, both are compared to authenticate the user.
 <br>
 To manage authenication I`ve used Passport Js.( Just trying not to reinvent the wheel )
+### DB Schema
+
+ ![alt text](./screenshots/schema.png)
 
 ### Implementation Details
 You need to have an account to post as well as like post.<br>
