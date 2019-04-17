@@ -17,4 +17,5 @@ $('#remmove-image-btn').on('click', function () {
     $('#image-preview-id')
         .val('')
         .hide();
+    $('#files').val("");
 });
