@@ -1,0 +1,92 @@
+<% include partials/header %>
+<div class="row">
+  <div class="col-lg-3"></div>
+  <div class="col-lg-6">
+    <div class="outer-card-section">
+      <div class="card card-1">
+        <div>
+          <div class="inner-card-section__head">
+            <div class="row">
+              <div class="col-lg-6">
+                <form action="/post" method="POST" enctype="multipart/form-data">
+                  <b><%= currentUser.username %></b><br>
+                  <span class="inner-card__info"> Passionate hair stylist</span>
+              </div>
+              <div class="col-lg-6">
+                <label class="btn btn-default pull-right" for="files"><i class="fa fa-picture-o" aria-hidden="true"></i>
+                  Add</label>
+                <input class="hidden" type='file' name="image" id="files" onchange="readURL(this);" />
+                <button type="submit" class="btn btn-default pull-right">Post</button>
+              </div>
+            </div>
+          </div>
+          <div class="image-preview">
+            <img id="image-preview-id" src="#" alt="your image" onerror="this.style.display='none'" />
+            <div class="image-preview__close-option">
+              <button class="btn btn-default" id="remmove-image-btn">Remove Image</button>
+            </div>
+          </div>
+          <textarea name="content" placeholder="Write a new awesome post!"></textarea>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3"></div>
+</div>
+
+
+
+
+<div class="post-outer-section">
+  <div class="row">
+    <% if(posts.length == 0){ %>
+    <div class="col-lg-2"></div>
+    <div class="col-lg-10">
+      <div class="alert alert-info" role="alert">No Post Found Sorry</div>
+    </div>
+    <div class="col-lg-2"></div>
+    <% } else { %>
+    <% posts.forEach(function(post){ %>
+    <div class="col-lg-3 col-md-3"></div>
+    <div class="col-lg-6 col-sm-12 col-md-6">
+      <div class="outer-card-section-post">
+        <div class="card card-1">
+          <div class="inner-card-section">
+            <div class="author"><%= post.author %></div>
+            <span class="inner-card__info"> Passionate hair stylist</span>
+            <div class="content"><%= post.content %></div><br>
+            <!-- The image  -->
+            <% if(post.image == null){}else{ %>
+            <div class="post-image"> <img class="img-responsive center-block rounded-image" src="<%= post.image %>"
+                alt="not-found">
+            </div>
+            <% } %>
+            <div class="inner-card__footer">
+              <div class="likes">
+                <a class="likeicon" postId="<%= post._id %>" id="<%= post._id %>" onclick="updateLikes(event)"
+                  username="<%= currentUser.username %>">
+                  <i class="fa fa-thumbs-o-up" id="<%= post._id %>" aria-hidden="true"
+                    userName="<%= currentUser.username %>"></i>
+                  <!-- <span class="like-count-<%= post._id %>"></span> -->
+                </a>
+                <span class="glyphicon glyphicon-comment inner-card__footer__icons"></span>
+                <span class="glyphicon glyphicon-share inner-card__footer__icons"></span>
+                <span class="inner-card__footer__icons likes-display ">
+                  <span class="like-count-<%= post._id %>">
+                    <%= post.likes %>
+                  </span>
+                  Likes, 1 Comment</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-lg-10 col-md-10"></div>
+    <% }); %>
+    <% } %>
+  </div>
+</div>
+<% include partials/footer %>

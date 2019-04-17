@@ -1,0 +1,174 @@
+.navbar {
+    border: 0px;
+}
+
+.inner-card-section__head {
+    padding: 20px;
+    background-color: #E0E0E0;
+}
+
+.inner-card__info {
+    color: #BDBDBD;
+}
+
+.btn-default {
+    background-image: none;
+    border-radius: 15px;
+    /* padding: 0px 2px; */
+    margin-right: 4px;
+}
+
+textarea {
+    border: none;
+    width: 100%;
+    padding: 10px;
+}
+
+.image-preview {
+    margin: 10px;
+}
+
+#image-preview-id {
+    border-radius: 10px;
+}
+
+.image-preview__close-option {
+    transition: .2s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.image-preview:hover #image-preview-id {
+    opacity: 0.3;
+}
+
+.image-preview:hover .image-preview__close-option {
+    opacity: 1;
+}
+
+a {
+    color: #424242;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.likes {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.glyphicon-heart {
+    color: #EF5350;
+}
+
+.content {
+    padding: 4px 0px;
+}
+
+.like-count {
+    padding-left: 4px;
+}
+
+.inner-card__footer__icons {
+    padding: 4px;
+    font-size: 16px;
+}
+
+.inner-card__footer {
+    padding-top: 10px;
+}
+
+.likes-display {
+    color: #757575;
+    font-weight: lighter;
+    font-style: normal;
+    font-size: 15px;
+}
+
+.link,
+.fa-hand-spock-o {
+    color: #66BB6A !important;
+}
+
+.jumbotron {
+    background-image: url("/images/background.png");
+    background-position: center;
+    background-size: cover;
+    background-color: white;
+}
+
+.sub-text {
+
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.jumbotron__heading {
+    font-family: Open Sans;
+    padding-top: 40px;
+    font-size: 35px;
+    padding-bottom: 40px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.login-section {
+    margin-top: 50px;
+    padding: 20px 40px;
+}
+
+.about-sub-section {
+    font-family: Open Sans;
+    text-align: center;
+}
+
+.user-profile__username {
+    color: black;
+}
+
+.rounded-image {
+    border-radius: 10px;
+}
+
+.row {
+    margin: 0px;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: red;
+}
+
+.registration-section {
+    padding: 80px;
+    background-image: url("/images/background-register.png");
+    background-position: center;
+    background-size: cover;
+    background-color: white;
+}
+
+.form-section {
+    padding: 30px;
+}
+
+@media only screen and (max-width: 700px) {
+    .registration-section {
+        padding: 40px;
+        background-image: none;
+    }
+}
+
+.registration-heading {
+    color: #E57373;
+    font-family: Open Sans;
+    font-weight: 300;
+}
