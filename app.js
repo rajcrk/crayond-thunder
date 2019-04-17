@@ -11,7 +11,7 @@ var User = require("./models/user");
 // Mongoose Setup 
 var mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost:27017/crayon");
+mongoose.connect("mongodb://admin:skylark1@ds215563.mlab.com:15563/crayon");
 app.set("view engine", "ejs");
 
 app.use('/uploads', express.static('uploads'));
